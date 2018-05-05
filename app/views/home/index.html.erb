@@ -1,0 +1,12 @@
+<h1>여기는 게시판 입니다</h1>
+<hr>
+<% @every_post.each do |p| %>
+제목 : <%= p.title %><br>
+내용 : <%= p.content %><br>
+작성일 : <%= p.created_at %><br>
+<a href="/edit_page/<%= p.id %>">[수정]</a>
+<a href="/destroy/<%= p.id %>">[삭제]</a>
+<hr>
+<% end %>
+
+<a href="/write">글쓰러 가기</a>
